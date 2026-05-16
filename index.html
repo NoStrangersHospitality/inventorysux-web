@@ -130,6 +130,7 @@ section{padding:100px 40px}
 .pricing-section{background:var(--dark);text-align:center}
 .pricing-card{background:var(--dark2);border:1px solid rgba(245,184,0,0.3);border-radius:16px;padding:48px;max-width:500px;margin:48px auto 0;position:relative;box-shadow:0 0 60px rgba(245,184,0,0.06)}
 .pricing-card::before{content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--black);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 14px;border-radius:20px}
+.addon-card::before{content:'ADD-ON';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--dark3);color:var(--gold);font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 14px;border-radius:20px;border:1px solid rgba(245,184,0,0.3)}
 .pricing-price{font-family:var(--font-display);font-size:80px;letter-spacing:2px;color:var(--white);line-height:1;margin-bottom:4px}
 .pricing-price sup{font-size:32px;vertical-align:top;margin-top:16px;font-family:var(--font-body);font-weight:300}
 .pricing-per{font-size:14px;color:var(--gray);margin-bottom:32px}
@@ -475,7 +476,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);paddin
     <h2 class="section-title" style="text-align:center">Simple. Transparent. No BS.</h2>
     <p class="section-sub" style="margin:0 auto;text-align:center">Start with Front of House. Add Back of House when you're ready. Cancel whenever you want.</p>
     <!-- Pricing grid -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:48px auto 0" class="pricing-grid-2col">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:48px auto 0;align-items:start" class="pricing-grid-2col">
 
       <!-- FOH -->
       <div class="pricing-card" style="margin:0">
@@ -496,9 +497,8 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);paddin
       </div>
 
       <!-- BOH Add-on -->
-      <div style="background:var(--dark2);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:48px;position:relative;display:flex;flex-direction:column">
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.08);border:1px solid rgba(245,184,0,0.15);border-radius:20px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;width:fit-content">Add-on</div>
-        <div class="pricing-price" style="color:var(--gold)"><sup style="color:var(--gold)">$</sup>10</div>
+      <div class="pricing-card addon-card" style="margin:0;border-color:rgba(245,184,0,0.15)">
+        <div class="pricing-price"><sup>$</sup>10</div>
         <div class="pricing-per">per month &nbsp;&middot;&nbsp; Back of House</div>
         <ul class="pricing-features" style="flex:1">
           <li>Food ordering — purveyors &amp; vendors</li>
