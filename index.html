@@ -194,7 +194,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);paddin
 .footer-links a{font-size:12px;color:rgba(255,255,255,0.3);text-decoration:none;transition:color .2s}.footer-links a:hover{color:var(--white)}
 
 /* ── RESPONSIVE ── */
-@media(max-width:768px){
+@media(max-width:768px){.pricing-grid-2col{grid-template-columns:1fr!important}
   nav{padding:14px 20px}
   .nav-links{display:none}
   section{padding:64px 20px}
@@ -473,23 +473,54 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);paddin
   <div class="section-inner">
     <div class="section-label" style="text-align:center">Pricing</div>
     <h2 class="section-title" style="text-align:center">Simple. Transparent. No BS.</h2>
-    <p class="section-sub" style="margin:0 auto;text-align:center">One plan. Everything included. Cancel whenever you want.</p>
-    <div class="pricing-card">
-      <div class="pricing-price"><sup>$</sup>15</div>
-      <div class="pricing-per">per month, per location</div>
-      <ul class="pricing-features">
-        <li>Ordering module — your bottles, your distributors</li>
-        <li>Pour Cost calculator — unlimited bottles</li>
-        <li>COGS &amp; Recipe costing</li>
-        <li>CSV import &amp; template downloads</li>
-        <li>Order sends via email &amp; SMS</li>
-        <li>Rep reply notifications</li>
-        <li>Inventory module <span style="color:var(--gray);font-size:12px">(coming soon)</span></li>
-      </ul>
-      <a href="#signup" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px">Start Your Free 14-Day Trial</a>
-      <p class="trial-note">Card required to start. <strong>You won't be charged</strong> until day 15. Cancel before then and you pay nothing.</p>
-      <div class="money-back">🔒 &nbsp;Cancel anytime. No questions asked.</div>
+    <p class="section-sub" style="margin:0 auto;text-align:center">Start with Front of House. Add Back of House when you're ready. Cancel whenever you want.</p>
+    <!-- Pricing grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:48px auto 0" class="pricing-grid-2col">
+
+      <!-- FOH -->
+      <div class="pricing-card" style="margin:0">
+        <div class="pricing-price"><sup>$</sup>15</div>
+        <div class="pricing-per">per month &nbsp;&middot;&nbsp; Front of House</div>
+        <ul class="pricing-features">
+          <li>Ordering — your bottles, your distributors</li>
+          <li>Pour Cost calculator — unlimited bottles</li>
+          <li>COGS &amp; Recipe costing</li>
+          <li>CSV import &amp; template downloads</li>
+          <li>Order sends via email &amp; SMS</li>
+          <li>Rep reply notifications</li>
+          <li>Inventory module <span style="color:var(--gray);font-size:12px">(coming soon)</span></li>
+        </ul>
+        <a href="#signup" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px">Start Free Trial &rarr;</a>
+        <p class="trial-note">Card required. <strong>No charge</strong> until day 15.</p>
+        <div class="money-back">🔒 &nbsp;Cancel anytime.</div>
+      </div>
+
+      <!-- BOH Add-on -->
+      <div style="background:var(--dark2);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:48px;position:relative;display:flex;flex-direction:column">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,184,0,0.08);border:1px solid rgba(245,184,0,0.15);border-radius:20px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;width:fit-content">Add-on</div>
+        <div class="pricing-price" style="color:var(--gold)"><sup style="color:var(--gold)">$</sup>10</div>
+        <div class="pricing-per">per month &nbsp;&middot;&nbsp; Back of House</div>
+        <ul class="pricing-features" style="flex:1">
+          <li>Food ordering — purveyors &amp; vendors</li>
+          <li>Food cost calculator</li>
+          <li>Recipe costing for kitchen</li>
+          <li>Prep sheets</li>
+          <li>Vendor management</li>
+          <li>CSV import &amp; template downloads</li>
+        </ul>
+        <div style="background:rgba(245,184,0,0.06);border:1px solid rgba(245,184,0,0.15);border-radius:10px;padding:16px;margin-bottom:20px;text-align:center">
+          <div style="font-size:12px;color:var(--gray);margin-bottom:4px">Bundle both for</div>
+          <div style="font-family:var(--font-display);font-size:36px;letter-spacing:1px;color:var(--white)"><sup style="font-size:18px;font-family:var(--font-body);font-weight:300">$</sup>25<span style="font-size:14px;font-family:var(--font-body);font-weight:300;color:var(--gray)">/mo</span></div>
+          <div style="font-size:11px;color:var(--gray);margin-top:2px">Full FOH + BOH — one subscription</div>
+        </div>
+        <a href="#signup" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px;background:transparent;border:1px solid rgba(245,184,0,0.4);color:var(--gold)">Add to Your Account &rarr;</a>
+        <p class="trial-note" style="margin-top:12px">Included in your 14-day free trial when bundled.</p>
+      </div>
+
     </div>
+
+    <!-- Bottom note -->
+    <p style="text-align:center;font-size:13px;color:rgba(255,255,255,0.3);margin-top:24px;max-width:500px;margin-left:auto;margin-right:auto">Both modules are per location. Managing multiple locations? Each gets its own account at the same price.</p>
   </div>
 </section>
 
@@ -549,8 +580,8 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);paddin
         <div class="faq-a">Rep replies route back into the app as notifications. You'll see a badge when a rep responds so you're not hunting through your texts or inbox.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is it $15 per location or per user?</div>
-        <div class="faq-a">Per location. One bar, one account, $15/month. If you manage multiple locations, each gets its own account at the same price.</div>
+        <div class="faq-q">How does pricing work?</div>
+        <div class="faq-a">Front of House is $15/month per location — that covers ordering, pour cost, and COGS. Back of House (kitchen tools) is a $10/month add-on. Bundle both for $25/month. Managing multiple locations? Each gets its own account at the same price.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">When is the Inventory module coming?</div>
